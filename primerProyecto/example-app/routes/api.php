@@ -3,6 +3,10 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ClienteController;
+use App\Http\Controllers\AutoController;
+use App\Http\Controllers\VentaController;
+
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -24,3 +28,17 @@ route::get('/cliente/{id}',[ClienteController::class,'mostrarClienteByid']);
 route::post('/cliente',[ClienteController::class,'addCliente']);
 route::delete('/cliente/{id}',[ClienteController::class,'deleteClienteByid']);
 route::put('/cliente/{id}',[ClienteController::class,'updateClienteByid']);
+
+
+route::get('/auto',[AutoController::class,'mostrarAllAutos']);
+route::get('/auto/{id}',[AutoController::class,'mostrarAutoByid']);
+route::post('/auto',[AutoController::class,'addAuto']);
+route::delete('/auto/{id}',[AutoController::class,'deleteAutoByid']);
+route::put('/auto/{id}',[AutoController::class,'updateAutoByid']);
+
+
+route::get('/venta',[VentaController::class,'mostrarAllVentas']);
+route::get('/venta/{id}',[VentaController::class,'mostrarVentasByid']);
+route::post('/venta',[VentaController::class,'addVenta']);
+route::delete('/venta/{id}',[VentaController::class,'deleteVentaByid']);
+route::put('/venta/{id}',[VentaControllerdc::class,'updateVentaByid']);
